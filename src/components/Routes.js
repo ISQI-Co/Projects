@@ -8,7 +8,6 @@ import App from "../App";
 import Tables from "./Table";
 const Routes=[
     {
-
       exact:true,
       path:"/",
       component:App

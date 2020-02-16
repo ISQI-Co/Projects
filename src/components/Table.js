@@ -23,7 +23,9 @@ export default function Tables() {
             <thead>
             <tr>
                 {
-                Table4.map((item,index)=>(
+                Table4.map(
+                    (item,index)=>
+                    (
                     <th key={item.id}
                         className='Rang1'>
                         {item.title}</th>
@@ -34,21 +36,24 @@ export default function Tables() {
             <tbody>
             <tr>
                 {
-                    Table2.map((item,index)=>(
+                    Table2.map(
+                        (item,index)=>(
                         <td key={item.id} className='Black'>{item.title}</td>
                     ))
                 }
             </tr>
             <tr>
                 {
-                    Table5.map((item,index)=>
+                    Table5.map(
+                        (item,index)=>
                         <td key={item.id} className='Black1'>{item.title}</td>
                     )
                 }
             </tr>
             <tr>
                 {
-                    Table3.map((item,index)=>(
+                    Table3.map(
+                        (item,index)=>(
                         <td key={item.id} className='Black'>{item.titleOne}</td>
                     ))
                 }
@@ -56,7 +61,8 @@ export default function Tables() {
             <tr>
                 {
                     Table6.map
-                    ((item,index)=>(
+                    (
+                        (item,index)=>(
                         <td
                             key={item.id}
                             className='Black1'>{item.title}</td>
