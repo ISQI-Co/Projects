@@ -2,7 +2,12 @@ import React,{useContext,Fragment} from 'react';
 import {Table} from "react-bootstrap";
 import ContextProvider from "../stateManagment/Context";
 import "./table.css"
-function Tables() {
+import Table2 from "./Table2";
+import Table3 from "./Table3";
+import Table4 from "./Table4";
+import Table5 from "./Table5";
+import Table6 from "./Table6";
+export default function Tables() {
     useContext(ContextProvider);
     return (
         <Fragment>
@@ -18,47 +23,54 @@ function Tables() {
         <Table className="Table">
             <thead>
             <tr>
-                <th className='Rang1'>کارکرد</th>
-                <th className='Rang2'>مزایا</th>
-                <th className='Rang3'>کسور</th>
+                {
+                Table4.map((item,index)=>(
+                    <th key={item.id}
+                        className='Rang1'>
+                        {item.title}</th>
+                ))
+            }
             </tr>
             </thead>
             <tbody>
             <tr>
-
-                <td className='Black'>کارکرد عادی</td>
-                <td className='Black'>حقوق پایه</td>
-                <td className='Black'>بیمه سهم کارمند</td>
-
+                {
+                    Table2.map((item,index)=>(
+                        <td key={item.id} className='Black'>{item.title}</td>
+                    ))
+                }
             </tr>
             <tr>
-
-                <td className='Black1'>ساعت اضافه کار</td>
-                <td className='Black1'>حق جذب</td>
-                <td className='Black1'>مالیات</td>
+                {
+                    Table5.map((item,index)=>
+                        <td key={item.id} className='Black1'>{item.title}</td>
+                    )
+                }
             </tr>
             <tr>
-                <td className='Black'>تعداد ایاب و ذهاب</td>
-                <td className='Black'>حق مسکن</td>
-                <td className='Black'>روند ماه جاری</td>
-
+                {
+                    Table3.map((item,index)=>(
+                        <td key={item.id} className='Black'>{item.titleOne}</td>
+                    ))
+                }
             </tr>
             <tr>
-                <td className='Black1'>کارکرد موثر</td>
-                <td className='Black1'>حق اولاد</td>
-                <td className='Black1'>بیمه تکمیلی سهم کارمند</td>
-
+                {
+                    Table6.map
+                    ((item,index)=>(
+                        <td
+                            key={item.id}
+                            className='Black1'>{item.title}</td>
+                    ))
+                }
             </tr>
-
             <tr>
                 <td
                  >
                 </td>
                 <td className='Black'>اضافه کاری</td>
                 <td></td>
-
             </tr>
-
             <tr>
                 <td
                 >
@@ -109,7 +121,7 @@ function Tables() {
                 <td
                     className='Black'
                 >
-جمع کسور(ریال)
+جمع کسور(ریال)           
                 </td>
             </tr>
             <tr>
@@ -122,7 +134,6 @@ function Tables() {
                    خالص پرداختی (ریال)
                 </td>
                 <td>
-
                 </td>
             </tr>
             </tbody>
@@ -131,4 +142,3 @@ function Tables() {
         </Fragment>
     );
 }
-export default Tables;
