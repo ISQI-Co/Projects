@@ -75,6 +75,9 @@ display: flex;
     color:black;
     font-family:B Nazanin;
 }
+.NeveshteStyle{
+    color:#0C5CCC;
+}
 @media (max-width: 700px) {
   .Table{
       width: 270px;

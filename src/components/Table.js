@@ -15,9 +15,8 @@ export default function Tables() {
                 <img src={require("./../assets/img/isqi-logo-revised.png")} alt=""/>
             </div>
             <div className="Neveshte">
-                <h1 style={{
-                    color:"#0C5CCC"
-                }}>فیش حقوقی دی ماه سال 1398</h1>
+                <h1 className="NeveshteStyle"
+                >فیش حقوقی دی ماه سال 1398</h1>
             </div>
         <div>
         <Table className="Table">
@@ -121,7 +120,7 @@ export default function Tables() {
                 <td
                     className='Black'
                 >
-جمع کسور(ریال)           
+جمع کسور(ریال)
                 </td>
             </tr>
             <tr>
